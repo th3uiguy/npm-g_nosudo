@@ -7,7 +7,7 @@ Inspired by a day trying to sort various machines out on our system to run code 
 
 and this [Stackoverflow answer](http://stackoverflow.com/a/13021677)
 
-Tested on Ubuntu 14.04 with Bash
+Tested on Ubuntu 14.04 and Mac OS 10.10.3 with Bash
 
 ##Usage:
 
@@ -15,7 +15,7 @@ Download the script, run it:
 
 ./npm-g-nosudo.sh 
 
-It will give you the option to fix your .bashrc .zshrc file(s) automatically to use the settings from [Sindre Sorhus' Guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
+It will give you the option to fix your .bashrc .zshrc .profile file(s) automatically to use the settings from [Sindre Sorhus' Guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
 If you say "n", it will print the variables you need to enable you to fix manually.
 
