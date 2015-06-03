@@ -130,16 +130,19 @@ fix_env() {
 		printf "${envfix}" ${npmdir} >> ~/.zshrc
 		printf "\nDon't forget to run 'source ~/.zshrc'\n"
 	fi
-
+    if [ -f "${HOME}/.profile" ]; then
+        printf "${envfix}" ${npmdir} >> ~/.profile
+        printf "\nDon't forget to run 'source ~/.profile'\n"
+    fi
 }
 
 echo_env() {
-	printf "\nYou may need to add the following to your ~/.bashrc / .zshrc file(s)\n\n" 
+	printf "\nYou may need to add the following to your ~/.bashrc / .zshrc / .profile file(s)\n\n" 
 	printf "${envfix}\n\n" ${npmdir} 
 }
 
 printf "\n\n"
-read -p "Do you wish to update your .bashrc/.zshrc file(s) with the paths and manpaths? [yn] " yn
+read -p "Do you wish to update your .bashrc/.zshrc/.profile file(s) with the paths and manpaths? [yn] " yn
 case $yn in
     [Yy]* ) fix_env;;
     [Nn]* ) echo_env;;
